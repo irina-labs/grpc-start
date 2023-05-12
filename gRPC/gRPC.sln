@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicSyntax", "BasicSyntax", "{085A4094-1DA4-40F3-BE70-A5EB5963627F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicSyntaxConsumer", "BasicSyntax\BasicSyntaxConsumer\BasicSyntaxConsumer.csproj", "{969134DA-5241-414C-92C3-857C41AE437C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{93FA804A-07A6-45E9-80DD-5C064EA2AEB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{323F6791-B0C6-48A2-A05C-BDAC01C0D535}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{4CB0F424-ED31-4CDF-9FB6-E20DFACCD826}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Speakers", "Speakers", "{7FF54093-2CD9-42C3-BBB4-E4F70A0F734A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Talks", "Talks", "{F1FCF051-5458-48C4-899C-62A7DF07DE1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talks.Service", "Talks.Service\Talks.Service.csproj", "{43573405-AA93-401B-9D9D-849F2E8216B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speaker.Service", "Speaker.Service\Speaker.Service.csproj", "{28B9907C-7AD7-427E-90F4-7684AA41E12F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{969134DA-5241-414C-92C3-857C41AE437C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969134DA-5241-414C-92C3-857C41AE437C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969134DA-5241-414C-92C3-857C41AE437C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969134DA-5241-414C-92C3-857C41AE437C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93FA804A-07A6-45E9-80DD-5C064EA2AEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FA804A-07A6-45E9-80DD-5C064EA2AEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93FA804A-07A6-45E9-80DD-5C064EA2AEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FA804A-07A6-45E9-80DD-5C064EA2AEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323F6791-B0C6-48A2-A05C-BDAC01C0D535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323F6791-B0C6-48A2-A05C-BDAC01C0D535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323F6791-B0C6-48A2-A05C-BDAC01C0D535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323F6791-B0C6-48A2-A05C-BDAC01C0D535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43573405-AA93-401B-9D9D-849F2E8216B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43573405-AA93-401B-9D9D-849F2E8216B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43573405-AA93-401B-9D9D-849F2E8216B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43573405-AA93-401B-9D9D-849F2E8216B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B9907C-7AD7-427E-90F4-7684AA41E12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B9907C-7AD7-427E-90F4-7684AA41E12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B9907C-7AD7-427E-90F4-7684AA41E12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B9907C-7AD7-427E-90F4-7684AA41E12F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{969134DA-5241-414C-92C3-857C41AE437C} = {085A4094-1DA4-40F3-BE70-A5EB5963627F}
+		{43573405-AA93-401B-9D9D-849F2E8216B6} = {F1FCF051-5458-48C4-899C-62A7DF07DE1F}
+		{28B9907C-7AD7-427E-90F4-7684AA41E12F} = {7FF54093-2CD9-42C3-BBB4-E4F70A0F734A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8590D35C-A83B-4A04-909F-50AA23521901}
+	EndGlobalSection
+EndGlobal
