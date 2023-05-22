@@ -1,0 +1,64 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+import "google/api/annotations.proto";
+
+option csharp_namespace = "Speaker.Service.Protos";
+package speakers;
+
+service SpeakerServiceDefinition{
+	rpc GetAll(google.protobuf.Empty) returns (stream SpeakerResponse){}
+    rpc GetById(SpeakerFilterRequest) returns (SpeakerResponse){
+        option (google.api.http) = {
+		   	get: "/v1/speakers/{Id}"
+		};
+    }   
+    rpc Create(SpeakerCreateRequest) returns (SpeakerResponse){}
+    rpc Update(SpeakerUpdateRequest) returns (google.protobuf.Empty){}
+    rpc Delete(SpeakerFilterRequest) returns (google.protobuf.Empty){}
+
+    rpc GetAllAtOnce(google.protobuf.Empty) returns (SpeakersResponse){} 
+
+}
+
+
+message SpeakerFilterRequest {
+    int32 Id = 1;
+}
+
+message SpeakersResponse {
+    repeated SpeakerResponse Speakers = 1;
+}
+ 
+ 
+message SpeakerCreateRequest {
+    string FirstName = 2;
+    string LastName = 3;
+    string Bio = 4;
+    string Country = 5; 
+    string Website = 6;
+    string Email = 7;
+    string City = 8;
+}
+
+message SpeakerUpdateRequest {
+    int32 Id = 1;
+    string FirstName = 2;
+    string LastName = 3;
+    string Bio = 4;
+    string Country = 5;
+    string Website = 6;
+    string Email = 7;    
+    string City = 8;
+}
+
+message SpeakerResponse {
+    int32 Id = 1;
+    string FirstName = 2;
+    string LastName = 3;
+    string Bio = 4;
+    string Country = 5;
+    string Website = 6;
+    string Email = 7;    
+    string City = 8;
+}

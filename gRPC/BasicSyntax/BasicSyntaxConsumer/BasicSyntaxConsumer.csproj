@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="resource\generatedcode\" />
+    <PackageReference Include="Google.Protobuf" Version="3.23.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.23.0" />
+    <Folder Include="resource\generatedcode\" />
   </ItemGroup>
 
 </Project>
