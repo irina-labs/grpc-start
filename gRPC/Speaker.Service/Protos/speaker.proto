@@ -1,7 +1,7 @@
 syntax = "proto3";
 import "google/protobuf/empty.proto";
 
-import "google/api/annotations.proto";
+
 
 option csharp_namespace = "Speaker.Service.Protos";
 package speakers;
@@ -9,9 +9,7 @@ package speakers;
 service SpeakerServiceDefinition{
 	rpc GetAll(google.protobuf.Empty) returns (stream SpeakerResponse){}
     rpc GetById(SpeakerFilterRequest) returns (SpeakerResponse){
-        option (google.api.http) = {
-		   	get: "/v1/speakers/{Id}"
-		};
+   
     }   
     rpc Create(SpeakerCreateRequest) returns (SpeakerResponse){}
     rpc Update(SpeakerUpdateRequest) returns (google.protobuf.Empty){}

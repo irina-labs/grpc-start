@@ -21,6 +21,11 @@ namespace Speaker.Service
 
         public override Task<SpeakerResponse> GetById(SpeakerFilterRequest request, ServerCallContext context)
         {
+            //if (!context.RequestHeaders.Where(x => x.Key == "grpc-previous-rpc-attempts").Any())
+            //{
+            //    throw new RpcException(new Status(StatusCode.Internal, $"Not here:Try again"));
+            //}
+
             var speaker = speakerRepository.GetByIdAsync(request.Id);
             if (speaker.Result == null)
             {
