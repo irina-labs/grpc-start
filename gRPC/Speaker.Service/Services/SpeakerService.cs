@@ -2,11 +2,12 @@
 using Data.Interface;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 using Speaker.Service.Protos;
 
 namespace Speaker.Service
 {
-    public class SpeakerService : SpeakerServiceDefinition.SpeakerServiceDefinitionBase
+    public class SpeakerService : SpeakerServiceDefinition.SpeakerServiceDefinitionBase, ISpeakerService
     {
         private readonly ILogger<SpeakerService> logger;
         private readonly ISpeakerRepository speakerRepository;
@@ -19,8 +20,10 @@ namespace Speaker.Service
             this.mapper = mapper;
         }
 
+        [Authorize]
         public override Task<SpeakerResponse> GetById(SpeakerFilterRequest request, ServerCallContext context)
         {
+
             //if (!context.RequestHeaders.Where(x => x.Key == "grpc-previous-rpc-attempts").Any())
             //{
             //    throw new RpcException(new Status(StatusCode.Internal, $"Not here:Try again"));

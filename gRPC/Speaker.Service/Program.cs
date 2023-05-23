@@ -1,8 +1,13 @@
+using Auth;
 using Data.Infrastructure;
 using Domain;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Speaker.Service;
+using Speaker.Service.Interceptors;
 using Speaker.Service.Mappings;
 using Speaker.Service.Services;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +15,11 @@ var builder = WebApplication.CreateBuilder(args);
 // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
 
 // Add services to the container.
-builder.Services.AddGrpc().AddJsonTranscoding();
+builder.Services.AddGrpc(options =>
+{
+    options.Interceptors.Add<ServerLoggingInterceptor>();
+}).AddJsonTranscoding();
+
 builder.Services.AddRepositories();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAutoMapper(typeof(SpeakerMappingProfile));
@@ -20,9 +29,32 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "grpc Workhop"        
+        Title = "grpc Workhop"
     });
 });
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateActor = false,
+            ValidateLifetime = false,
+            IssuerSigningKey = JwtHelper.SecurityKey,
+        };
+    });
+
+builder.Services.AddAuthorization(o =>
+{
+    o.AddPolicy(JwtBearerDefaults.AuthenticationScheme, p =>
+    {
+        p.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+        p.RequireClaim(ClaimTypes.Name);
+    });
+});
+
 
 builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
 {

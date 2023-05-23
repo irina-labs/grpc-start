@@ -13,7 +13,7 @@ builder.Services.AddGrpcClient<SpeakerServiceDefinition.SpeakerServiceDefinition
     (o => o.Address = new Uri(speakerAddress))
     .ConfigureChannel(o =>
     {
-        o.HttpHandler = new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler());
+        o.HttpHandler = new GrpcWebHandler(GrpcWebMode.GrpcWebText, new HttpClientHandler());
     });
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });

@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Auth\Auth.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Protobuf Include="..\Speaker.Service\Protos\speaker.proto" GrpcServices="Client">
       <Link>Protos\speaker.proto</Link>
     </Protobuf>
