@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8855A8DB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeakerService.Tests.Unit", "SpeakerService.Tests.Unit\SpeakerService.Tests.Unit.csproj", "{15C1469A-05B2-4FED-BC98-484287F3E2E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeakerService.Tests.Integration", "SpeakerService.Tests.Integration\SpeakerService.Tests.Integration.csproj", "{9ED39C8C-4242-414D-96C1-7B20F9C9EF28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{15C1469A-05B2-4FED-BC98-484287F3E2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15C1469A-05B2-4FED-BC98-484287F3E2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15C1469A-05B2-4FED-BC98-484287F3E2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED39C8C-4242-414D-96C1-7B20F9C9EF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED39C8C-4242-414D-96C1-7B20F9C9EF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED39C8C-4242-414D-96C1-7B20F9C9EF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED39C8C-4242-414D-96C1-7B20F9C9EF28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +113,7 @@ Global
 		{2E62207E-7DBC-41C9-B1CB-C9DA7A874F03} = {E521E864-0A31-408D-96A9-BA4A48E76792}
 		{B31A4BF3-08B8-4142-8F89-924D8D5A2E4C} = {E521E864-0A31-408D-96A9-BA4A48E76792}
 		{15C1469A-05B2-4FED-BC98-484287F3E2E3} = {8855A8DB-869B-426E-B7AD-B4F918B63BF3}
+		{9ED39C8C-4242-414D-96C1-7B20F9C9EF28} = {8855A8DB-869B-426E-B7AD-B4F918B63BF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8590D35C-A83B-4A04-909F-50AA23521901}
